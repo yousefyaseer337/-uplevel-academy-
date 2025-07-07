@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UP LEVEL ACADEMY</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body dir="rtl">
+    <header>
+        <div class="logo">
+            <h1> <a> منصتكم التعليمية الاولي </a>   </h1>
+            <img src="img/download.jfif" alt="logo" width="60px">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. At, eligendi?</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html"> الصصفحة الرئيسيه </a></li>
+                <li><a href="login.html">  تسجيل الدخول </a></li>
+                <li><a href="lesons.html">  الدروس  </a></li>
+                <li><a href="#">  امتحانات  </a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="sec1">
+            <h3> الرياضيات </h3>
+            <img src="img/download.jfif" alt="logo" width="100px">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, consequuntur.</p>
+            <b> <a href="lesons.html#math">  ابدأ الان </a> </b>
+        </section>
+
+        <section class="sec2">
+            <h3> فيزيا </h3>
+            <img src="img/download.jfif" alt="logo" width="100px">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, consequuntur.</p>
+            <b> <a href="lesons.html#math">  ابدأ الان </a> </b>
+        </section>
+
+        <section class="sec3">
+            <h3> لغة </h3>
+            <img src="img/download.jfif" alt="logo" width="100px">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, consequuntur.</p>
+            <b> <a href="lesons.html#math">  ابدأ الان </a> </b>
+        </section>
+
+        <section class="sec4">
+            <h3> لغة </h3>
+            <img src="img/download.jfif" alt="logo" width="100px">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, consequuntur.</p>
+            <b> <a href="lesons.html#math">  ابدأ الان </a> </b>
+        </section>
+
+        <section class="sec5">
+            <h3> لغة </h3>
+            <img src="img/download.jfif" alt="logo" width="100px">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, consequuntur.</p>
+            <b> <a href="lesons.html#math">  ابدأ الان </a> </b>
+        </section>
+    </main>
+    <footer>
+        <div class="whatsapp-button">
+            <a href="https://wa.me/20" class="whatsapp-button" target="_blank"><img src="img/whats.jfif" alt=""></a>
+        </div>
+        <strong>  جميع الحقوق محفوظة 2025  </strong>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTopBtn" class="scroll-to-top-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up">
+            <path d="m5 12 7-7 7 7"/><path d="M12 19V5"/>
+        </svg>
+    </button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Smooth Scrolling for Navigation Links
+            document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault(); // Prevent default jump behavior
+
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+
+                    if (targetElement) {
+                        // Scroll smoothly to the target element
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+
+                        // Close mobile menu after clicking a link
+                        if (mainNav.classList.contains('is-open')) {
+                            mainNav.classList.remove('is-open');
+                            menuToggle.classList.remove('is-active');
+                        }
+                    }
+                });
+            });
+
+            // Mobile Navigation Toggle
+            const menuToggle = document.getElementById('menu-toggle');
+            const mainNav = document.getElementById('main-nav');
+
+            if (menuToggle && mainNav) {
+                menuToggle.addEventListener('click', () => {
+                    mainNav.classList.toggle('is-open');
+                    menuToggle.classList.toggle('is-active');
+                });
+            }
+
+            // Scroll to Top Button Functionality
+            const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+            // Show/Hide button based on scroll position
+            window.addEventListener('scroll', () => {
+                if (scrollToTopBtn) {
+                    if (window.scrollY > 300) { // Show button after scrolling 300px
+                        scrollToTopBtn.classList.add('show');
+                    } else {
+                        scrollToTopBtn.classList.remove('show');
+                    }
+                }
+            });
+
+            // Scroll to top when button is clicked
+            if (scrollToTopBtn) {
+                scrollToTopBtn.addEventListener('click', () => {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth' // Smooth scroll to top
+                    });
+                });
+            }
+        });
+    </script>    
+</body>
+</html>
