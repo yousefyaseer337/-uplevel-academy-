@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تصحيح الامتحان</title>
+    <link rel="stylesheet" href="test.css">
+</head>
+<body>
+        <header>
+        <div class="logo">
+            <h1> <a>  حلم هندسه بيقرب  </a>   </h1>
+            <img src="img/download.jfif" alt="logo" width="60px">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. At, eligendi?</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html"> الصصفحة الرئيسيه </a></li>
+                <li><a href="login.html">  تسجيل الدخول </a></li>
+                <li><a href="lesons.html">  الدروس  </a></li>
+                <li><a href="test.html">  امتحانات  </a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <div class="container">
+        <h1>اختبار المعرفة العامة</h1>
+        <form id="quizForm">
+            <div class="question-block">
+                <p>1. ما هي عاصمة مصر؟</p>
+                <label>
+                    <input type="radio" name="q1" value="القاهرة"> القاهرة
+                </label><br>
+                <label>
+                    <input type="radio" name="q1" value="الإسكندرية"> الإسكندرية
+                </label><br>
+                <label>
+                    <input type="radio" name="q1" value="أسوان"> أسوان
+                </label><br>
+            </div>
+
+            <div class="question-block">
+                <p>2. ما هو الكوكب الثالث في المجموعة الشمسية؟</p>
+                <label>
+                    <input type="radio" name="q2" value="المريخ"> المريخ
+                </label><br>
+                <label>
+                    <input type="radio" name="q2" value="الأرض"> الأرض
+                </label><br>
+                <label>
+                    <input type="radio" name="q2" value="المشتري"> المشتري
+                </label><br>
+            </div>
+
+            <button type="submit">تسليم الإجابات</button>
+        </form>
+
+        <div id="results" class="results">
+            <h2>نتائجك:</h2>
+            <p id="score">درجتك: 0 / 0</p>
+            <div id="feedback"></div>
+        </div>
+    </div>
+
+    <script src="test.js"></script>
+</body>
+</html>
